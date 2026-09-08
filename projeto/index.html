@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Databank - Personagens</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Catálogo Star Wars</h1>
+        <p>Pesquise personagens por nome e afiliação</p>
+    </header>
+
+    <main>
+        <!-- Seção de Filtros / Pesquisa -->
+        <section class="filtros-container">
+            <input type="text" id="input-nome" placeholder="Buscar por nome...">
+
+            <select id="select-categoria">
+                <option value="">Todas as Categorias</option>
+                <option value="jedi">Jedi</option>
+                <option value="sith">Sith</option>
+                <option value="empire">Império (Empire)</option>
+                <option value="rebel">Aliança Rebelde (Rebel)</option>
+                <option value="resistance">Resistência (Resistance)</option>
+                <option value="bounty hunter">Caçador de Recompensas</option>
+                <option value="clone">Clones / Clone Wars</option>
+            </select>
+        </section>
+
+        <!-- Indicador de Carregamento -->
+        <div id="loading" class="hidden">Carregando personagens da galáxia...</div>
+
+        <!-- Grade onde os cards dos personagens serão injetados -->
+        <div id="personagens-grid" class="grid-container"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
